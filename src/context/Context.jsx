@@ -10,12 +10,6 @@ export function ContextProvider(props) {
     const [favList, setFavList] = useState(
       localStorage.getItem("Favoritos") ? JSON.parse(localStorage.getItem("Favoritos")) : []
     )
-    
-    
-  
-
-  
-    
 
     const url= 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20'
     
@@ -56,7 +50,7 @@ export function ContextProvider(props) {
 
       setFavList(actFavs)
       localStorage.setItem("Favoritos", JSON.stringify(actFavs))
-      }
+    }
 
 
   return (

@@ -5,37 +5,37 @@ import Pokemon from './Componentes/Pokemon';
 import { useContext, useState } from 'react';
 import { Context } from './context/Context';
 import styles from './styles/app.module.css';
-import stylesF from './styles/form.module.css';
 import Favoritos from './Componentes/Favoritos';
+import {ThemeContext} from './context/ThemeContext.jsx'
 
 
 function App() {
 
-  const {data,handleOnSubmit} = useContext(Context)
-  const [theme, setTheme] = useState('dark');
+  const {data} = useContext(Context)
+  const {theme,toggleTheme} = useContext(ThemeContext)
+  
   
   let text = theme=='dark'? <h3>dark</h3>: <h3>light</h3>
 
-  function handleClick(){
-    theme == 'dark'? setTheme('light'): setTheme('dark')
-  }
+  
 
   
 
   return (
 
     <>
-        <div className={styles.conteiner}>
+      <div className={styles.conteiner} id={theme}>
         <Router>
-          <header className={styles}>
+          <header>
             <Link to={"/"} className={styles.link}><img src="../public/logo1.png" alt="logo" className={styles.logo} /></Link>
             <div className={styles.vinculos}>
               <Link to={"/"} className={styles.link}><h3 className={styles.text}>Home</h3></Link>
               <Link to={"/login"} className={styles.link}><h3 className={styles.text}>Login</h3></Link>
               <Link to={"/favoritos"} className={styles.link}><h3 className={styles.text}>Favoritos</h3></Link>
             </div>
-            <button className={styles.button} onClick={handleClick}>{text}</button>
+            <button className={styles.button} onClick={toggleTheme}>{text}</button>
           </header>
+          
           <main className={styles.body}  >
             <Routes>
               <Route path="/login" element={<Formu/>}/>
@@ -49,7 +49,7 @@ function App() {
             <h2>ESTO ES EL FOOTER</h2>
           </footer>
         </Router>
-      </div>
+      </div>  
     </>
   )
 }

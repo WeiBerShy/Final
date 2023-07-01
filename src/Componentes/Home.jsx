@@ -11,19 +11,16 @@ function Home() {
 
   const {data} = useContext(Context)
 
-  return (
-    <>
-      <div className={styles.card}>
+  return ( 
+
+      <div className={styles.card} >
           {!data? 'Cargando...':data.map((data)=>{
-            return (
-              <>
-                <Link to={`/pokemon/${data.id}`} key={data.id} className={styles.link}>
-                    <Card data={data} />     
-                </Link>     
-              </>              
+            return ( 
+              <Link to={`/pokemon/${data.id}`} key={data.id} className={styles.link}>  
+                <Card data={data} key={data.name}/>     
+              </Link>                   
           )})}         
-      </div> 
-    </>  
+      </div>  
   )
 }
 

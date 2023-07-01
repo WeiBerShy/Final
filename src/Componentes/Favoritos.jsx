@@ -20,12 +20,10 @@ function Favoritos() {
         </div>
         <div className={styles.card}>
             {favList.length==0? <h2>No tienes ningun Pokemon en favoritos</h2>: favList.map((pokemon)=>{              
-                return (
-                    <>                      
-                        <Link to={`/pokemon/${pokemon.id}`} key={pokemon.id} className={styles.link}>
-                            <Card data={pokemon} />                   
-                        </Link>
-                    </>                
+                return (                   
+                    <Link to={`/pokemon/${pokemon.id}`} key={pokemon.id} className={styles.link}>
+                        <Card data={pokemon} />                   
+                    </Link>                
             )})}        
         </div>
     

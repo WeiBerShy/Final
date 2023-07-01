@@ -12,7 +12,7 @@ function Card({data}) {
   };
   
   return (
-    <div key={data.id} className={styles.pkmconteiner}>
+    <div key={data.location_area_encounters} className={styles.pkmconteiner}>
         <button onClick={(e)=>handleButtonClick(e,data)}>Fav</button>
         <img className={styles.imgp} src={data.sprites.other['official-artwork'].front_default} alt="hola" ></img>
         <h1>{data.name}</h1> 

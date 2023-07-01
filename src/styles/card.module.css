@@ -1,0 +1,32 @@
+.link{
+    margin: 50px 0 50px 0;
+    text-decoration: none;
+    color: black;
+}
+body h2{
+    margin: 0;
+}
+.card{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.imgp{
+    width: 350px;
+    height: auto;
+}
+.pkmconteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 20%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: white;
+    
+}

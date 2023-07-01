@@ -1,0 +1,90 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    display: flex;
+    background: rgb(232, 213, 6);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.vinculos{
+    
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 50px;
+    
+    
+}
+
+.logo{
+    width: 300px;
+    height: auto;
+}
+.button{
+    
+    width: 100px;
+    height: 50px;
+}
+
+.text{
+    color:#000;
+    
+}
+.link{
+    text-decoration: none;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: rgb(232, 213, 6);
+    width: 100vw;
+    height: 150px;
+}
+footer h2{
+    margin: 0;
+}
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    
+    
+}
+.body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 1);
+    background-image: url('../../public/zekrom.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta el valor según tu preferencia */
+    background-position: center;
+    opacity: 0.95;
+    z-index: -1;
+    
+    
+}

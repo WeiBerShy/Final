@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-
+import styles from '../styles/card.module.css'
 
 function Pokemon({data}) {
 
@@ -11,8 +11,8 @@ function Pokemon({data}) {
   if(!pokemon) return <h1>No se encontro el pokemon</h1>
 
   return (
-    <div>
-        <img src={pokemon.sprites.other['official-artwork'].front_default} alt="hola" ></img>
+    <div className={styles.pkmconteiner2}>
+        <img className={styles.imgp} src={pokemon.sprites.other['official-artwork'].front_default} alt="hola" ></img>
         {pokemon.id==7 ? <h2>Vamo a Calmarno</h2>:<h1>{pokemon.name}</h1>}
         <h3>Habilidad: {pokemon.abilities[0]?.ability.name}</h3>
         <h3>Habilidad oculta: {pokemon.abilities[1]?.ability.name}</h3>
